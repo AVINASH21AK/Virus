@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!--EditText GuideLine-->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineBottomOfOldPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineTopOfOldPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.14"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineBottomOfNewPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineTopOfNewPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.27"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineBottomOfConfirmPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.31"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineTopOfConfirmPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineStartEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineEndEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90"/>
+
+
+    <!--Button guideline-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineTopOfButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineBottomOfButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineEndButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.70"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineStartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.32"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputLayOldPassChangePass"
+        style="@style/AppTheme.TextInputLayout.Common"
+        app:boxStrokeColor="@color/colorGray"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineBottomOfOldPass"
+        app:layout_constraintBottom_toTopOf="@+id/guideLineTopOfOldPass"
+        app:layout_constraintEnd_toEndOf="@+id/guideLineEndEditText"
+        app:layout_constraintStart_toStartOf="@+id/guideLineStartEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_old_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtOldPasswordChangePass"
+            style="@style/AppTheme.EditText.Common"
+            android:inputType="textPassword"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputLayNewPassChangePass"
+        style="@style/AppTheme.TextInputLayout.Common"
+        app:boxStrokeColor="@color/colorGray"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineBottomOfNewPass"
+        app:layout_constraintBottom_toTopOf="@+id/guideLineTopOfNewPass"
+        app:layout_constraintEnd_toEndOf="@+id/guideLineEndEditText"
+        app:layout_constraintStart_toStartOf="@+id/guideLineStartEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_new_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtNewPasswordChangePass"
+            style="@style/AppTheme.EditText.Common"
+            android:inputType="textPassword"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputLayConfirmPassChangePass"
+        style="@style/AppTheme.TextInputLayout.Common"
+        app:boxStrokeColor="@color/colorGray"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineBottomOfConfirmPass"
+        app:layout_constraintBottom_toTopOf="@+id/guideLineTopOfConfirmPass"
+        app:layout_constraintEnd_toEndOf="@+id/guideLineEndEditText"
+        app:layout_constraintStart_toStartOf="@+id/guideLineStartEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_Confirm_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtConfirmPasswordChangePass"
+            style="@style/AppTheme.EditText.Common"
+            android:inputType="textPassword"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnUpdateChangePass"
+        android:text="@string/button_update"
+        style="@style/AppTheme.Button.Common.Fill"
+        app:layout_constraintBottom_toTopOf="@+id/guideLineTopOfButton"
+        app:layout_constraintBottom_toBottomOf="@+id/guideLineBottomOfButton"
+        app:layout_constraintEnd_toEndOf="@+id/guideLineEndButton"
+        app:layout_constraintStart_toStartOf="@+id/guideLineStartButton"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_40sdp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

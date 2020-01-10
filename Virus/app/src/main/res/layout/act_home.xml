@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.dlazaro66.qrcodereaderview.QRCodeReaderView
+            android:id="@+id/qrdecoderview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewScannerSquare"
+            android:src="@drawable/scanner_square"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            layout="@layout/btmsheet_qr_result"/>
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/setting_bottom_sheet_touch_outside_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:soundEffectsEnabled="false"
+        android:background="@color/clrBlackTransparent"
+        android:visibility="gone"/>
+
+
+    <FrameLayout
+        android:id="@+id/frameLay_QrIsSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:behavior_peekHeight="@dimen/size_0"
+        app:behavior_hideable="true"
+        android:clickable="true">
+
+        <include
+            layout="@layout/btmsheet_qr_is_success"/>
+
+    </FrameLayout>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_15sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contactUs_txtInputLayoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/strName"
+            app:boxStrokeColor="@color/colorGray"
+            style="@style/AppTheme.TextInputLayout.Common">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contactus_edtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text=""
+                android:singleLine="true"
+                style="@style/AppTheme.EditText.Common"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contactUs_txtInputLayoutEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/strEmail"
+            android:layout_marginTop="@dimen/_15sdp"
+
+            app:boxStrokeColor="@color/colorGray"
+            style="@style/AppTheme.TextInputLayout.Common">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contactus_edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:text=""
+                android:singleLine="true"
+                style="@style/AppTheme.EditText.Common"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contactUs_txtInputLayoutMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/strMobile"
+            android:layout_marginTop="@dimen/_15sdp"
+
+            app:boxStrokeColor="@color/colorGray"
+            style="@style/AppTheme.TextInputLayout.Common">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contactus_edtMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text=""
+                android:singleLine="true"
+                style="@style/AppTheme.EditText.Common"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contactUs_txtInputLayoutMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/strMessage"
+            android:layout_marginTop="@dimen/_15sdp"
+
+            app:boxStrokeColor="@color/colorGray"
+            style="@style/AppTheme.TextInputLayout.Common">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contactus_edtMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:text=""
+                android:minLines="1"
+                android:maxLines="5"
+
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="@dimen/_11sdp"
+                android:paddingRight="@dimen/_28sdp"
+                android:textColor="@color/colorBlack" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/contactus_btnSumbit"
+        style="@style/AppTheme.Button.Common.Fill"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:text="@string/button_submit"
+
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>

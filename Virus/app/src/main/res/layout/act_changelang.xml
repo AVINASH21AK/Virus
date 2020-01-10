@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineTop"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.47" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_26ssp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideLineTop"
+        android:text="@string/daawat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewChangeLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideLineCenter"
+        app:layout_constraintStart_toStartOf="@id/guideLineStart"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/label_choose_language" />
+    <!--app:layout_constraintBottom_toTopOf="@id/guideLineCenter"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineCenter"-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewEnglish"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="@string/english"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintTop_toBottomOf="@id/textViewChangeLanguage"
+        app:layout_constraintStart_toStartOf="@id/guideLineStart"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewArabic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="@string/arabic1"
+        android:layoutDirection="ltr"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="@dimen/_16ssp"
+        android:textDirection="ltr"
+        app:layout_constraintTop_toBottomOf="@id/textViewEnglish"
+        app:layout_constraintStart_toStartOf="@id/guideLineStart"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNextChangeLanguage"
+        android:text="@string/button_next"
+        style="@style/AppTheme.Button.Common.Fill"
+        app:layout_constraintStart_toStartOf="@id/guideLineStart"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineBottom"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_40sdp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

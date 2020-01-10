@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorScreenBg">
+
+    <FrameLayout
+        android:id="@+id/base_flMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/base_rlToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_56"
+                android:elevation="@dimen/size_0">
+
+                <LinearLayout
+                    android:id="@+id/base_llLeftToolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/base_ivBack"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/size_10"
+                        android:src="@drawable/back"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/base_ivHomeMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_drawer" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/base_tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:maxWidth="@dimen/size_200"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textColor="@color/clrBlack"
+                    android:textSize="@dimen/size_16" />
+
+                <TextView
+                    android:id="@+id/base_tvTitleHome"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="bottom"
+
+
+                    android:text="@string/daawat"
+
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_22sdp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/base_llRightToolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/base_ivAddGuestHomeMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_profile"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/base_llSubMainContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/base_viewOutside"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/clrBlackTR50"/>
+
+
+        <RelativeLayout
+            android:id="@+id/navigationMenuListBaseActivity"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_430sdp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_slide_menu" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewCloseBaseActivity"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_7sdp"
+                    android:paddingEnd="@dimen/_7sdp"
+                    android:paddingBottom="@dimen/_7sdp"
+                    android:src="@drawable/close"
+                    app:layout_constraintStart_toStartOf="@id/guideLineStart"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewHomeBaseActivity"
+                    style="@style/AppTheme.TextView.Menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_home"
+                    app:layout_constraintStart_toStartOf="@id/guideLineStart"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewCloseBaseActivity" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewChangeLanguageBaseActivity"
+                    style="@style/AppTheme.TextView.Menu"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/label_change_language"
+                    app:layout_constraintStart_toStartOf="@id/guideLineStart"
+                    app:layout_constraintTop_toBottomOf="@id/textViewHomeBaseActivity" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:visibility="gone"
+                    android:id="@+id/textViewChangePassword"
+                    style="@style/AppTheme.TextView.Menu"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/label_change_password"
+                    app:layout_constraintStart_toStartOf="@id/guideLineStart"
+                    app:layout_constraintTop_toBottomOf="@id/textViewHomeBaseActivity" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewFaqBaseActivity"
+                    style="@style/AppTheme.TextView.Menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_faq"
+
+                    app:layout_constraintStart_toStartOf="@id/guideLineStart"
+                    app:layout_constraintTop_toBottomOf="@id/textViewChangeLanguageBaseActivity" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewTermsAndConditionsBaseActivity"
+                    style="@style/AppTheme.TextView.Menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_terms_and_condition"
+                    app:layout_constraintStart_toStartOf="@id/guideLineStart"
+                    app:layout_constraintTop_toBottomOf="@id/textViewFaqBaseActivity" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewContactUsBaseActivity"
+                    style="@style/AppTheme.TextView.Menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_support_us"
+                    app:layout_constraintStart_toStartOf="@id/guideLineStart"
+                    app:layout_constraintTop_toBottomOf="@id/textViewTermsAndConditionsBaseActivity" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewLogoutBaseActivity"
+                    style="@style/AppTheme.TextView.Menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_logout"
+                    app:layout_constraintStart_toStartOf="@id/guideLineStart"
+                    app:layout_constraintTop_toBottomOf="@id/textViewContactUsBaseActivity" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/baseframeLay_ChangeLang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:behavior_peekHeight="@dimen/size_0"
+        app:behavior_hideable="true"
+        android:clickable="true">
+
+        <include
+            layout="@layout/btmsheet_changelang"/>
+
+    </FrameLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

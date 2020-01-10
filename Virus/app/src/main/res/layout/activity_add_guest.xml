@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineTopName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineTop"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineStart"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineEnd"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineCenter"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineBottom"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addguest_txtInput"
+        style="@style/AppTheme.TextInputLayout.Common"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:boxStrokeColor="@color/colorGray"
+        app:layout_constraintStart_toStartOf="@id/guideLineStart"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_name"
+        app:layout_constraintTop_toTopOf="@+id/guideLineTopName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addguest_edtName"
+            style="@style/AppTheme.EditText.Common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/addguest_llMobile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="@dimen/_30sdp"
+        app:layout_constraintTop_toBottomOf="@id/addguest_txtInput"
+        app:layout_constraintStart_toStartOf="@id/guideLineStart"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/addguest_spn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerVertical="true"
+
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                android:visibility="invisible"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/AppTheme.TextInputLayout.Common"
+                app:boxStrokeColor="@color/colorGray"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <!--android:hint="@string/strCountryCode"-->
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addguest_edtCode"
+                    style="@style/AppTheme.EditText.Common"
+                    android:inputType="text"
+                    android:text=""
+                    android:textAlignment="gravity"
+                    android:gravity="center"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/AppTheme.TextInputLayout.Common"
+            app:boxStrokeColor="@color/colorGray"
+            android:layout_marginLeft="@dimen/_5sdp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_mobile_number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addguest_edtMobile"
+                style="@style/AppTheme.EditText.Common"
+                android:inputType="phone"
+                android:text=""
+                android:maxLength="10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addguest_btnAddGuest"
+        android:text="@string/button_add"
+        style="@style/AppTheme.Button.Common.Fill"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineBottom"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_40sdp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
